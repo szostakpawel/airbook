@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "migrate": "npx sequelize-cli db:migrate",
     "start": "ts-node ./src/index.ts",
     "dev": "ts-node-dev --respawn ./src/index.ts",
     "test": "jest"
@@ -28,6 +29,11 @@
     "typescript": "^4.7.3"
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.20.1"
   }
 }
