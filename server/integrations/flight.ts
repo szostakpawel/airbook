@@ -1,7 +1,7 @@
 import { sequelize } from ".";
 import { DataTypes } from "sequelize";
 
-import { IFlight } from "../types";
+import { IFlight } from "../src/types";
 
 const Flight = sequelize.define("flight", {
   plane: {
@@ -10,11 +10,11 @@ const Flight = sequelize.define("flight", {
     unique: true,
   },
   capacity: {
-    type: DataTypes.NUMBER,
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
   distance: {
-    type: DataTypes.NUMBER,
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
 });
